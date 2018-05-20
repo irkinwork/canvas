@@ -1,0 +1,133 @@
+/*----------- Шрифты  (START)-----------*/
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fa/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/fa/fontawesome-webfont.eot?#iefix&v=4.7.0") format('embedded-opentype'), url("../fa/fonts/fontawesome-webfont.woff2?v=4.7.0") format('woff2'), url("../fonts/fa/fontawesome-webfont.woff?v=4.7.0") format('woff'), url("../fonts/fa/fontawesome-webfont.ttf?v=4.7.0") format('truetype'), url("../fonts/fa/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSansRegular';
+  src: url("../fonts/os-regular/OpenSansRegular.eot");
+  src: url("../fonts/os-regular/OpenSansRegular.eot?#iefix") format('embedded-opentype'), url("../fonts/os-regular/OpenSansRegular.woff") format('woff'), url("../fonts/os-regular/OpenSansRegular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*----------- Шрифты  (END)-----------*/
+/*-----------  Цвета  (START)-----------*/
+/*----------- Цвета  (end)-----------*/
+/*----------- Вспомогательные функции  (START)-----------*/
+.center {
+  text-align: center;
+}
+.bold {
+  font-family: 'OpenSansRegular';
+}
+/*----------- Вспомогательные функции (End)-----------*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'OpenSansRegular';
+}
+input {
+  height: 24px;
+}
+.editor__input {
+  width: 50px;
+  margin: 0 15px 0 0;
+  padding: 0 0 0 10px;
+}
+.editor__wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.editor__controls {
+  padding: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.editor__span {
+  margin: 0 15px 0 0;
+}
+.editor__col {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 15px 0;
+}
+.editor__check {
+  margin: 0 15px 0 0;
+}
+.editor__jscolor {
+  border: none;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  padding: 0 0 0 5px;
+  width: 75px;
+}
+.check {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.check__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 15px 0 0;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.check__container .check {
+  background-color: #ccc;
+}
+.check__container .check__mark:after {
+  position: absolute;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.check__container input:checked ~.check__mark {
+  background-color: #1da600;
+}
+.check__container input:checked ~.check__mark:after {
+  display: block;
+}
+.check__mark {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background-color: #eee;
+}
+.check__mark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}

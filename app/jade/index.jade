@@ -1,0 +1,24 @@
+doctype html
+html(lang="ru")
+	head(lang="ru")
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+		title Главная
+		//- link(rel="stylesheet", href="./css/libs.min.css")
+		link(rel="stylesheet", href="./css/bundle.min.css")
+	body
+		.editor__wrapper
+			.editor__controls
+				span.editor__col
+					span.editor__span Select the amount of dots to connect
+					input.editor__input(type="number", value="2", min="2")
+					button.editor__btn Clear
+				span.editor__col
+					label.check__container
+						input.editor__check.check(type="checkbox")
+						span.check__mark
+					span.editor__span Check if you want to pick a color from color-picker
+					input.editor__jscolor.jscolor(value="1DA600")
+			canvas.editor
+		script(src="./js/libs.min.js")
+		script(src="./js/bundle.min.js")
