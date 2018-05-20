@@ -24,7 +24,7 @@ let canvas = document.querySelector(".editor"),
             } else if (!dot.picker && (i<amount)){
                 ctx.fillStyle = dots[0].color
             } else if (!dot.picker && (i>=amount)){
-                ctx.fillStyle = dots[i-1].color
+                ctx.fillStyle = dots[i].color
             }    
             ctx.arc(dot.x, dot.y, dot.radius, 0, Math.PI * 2);
             ctx.fill();
@@ -48,7 +48,7 @@ let canvas = document.querySelector(".editor"),
                 if ( dot.picker ) {
                     ctx.strokeStyle = dot.color
                 } else {
-                    ctx.strokeStyle = dots[i-1].color
+                    ctx.strokeStyle = dots[i].color
                 } 
     
             for (let j=1; j<=amount; j++) {
